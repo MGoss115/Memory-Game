@@ -59,7 +59,6 @@ function gameBoard(){
         var card = document.createElement('img')
         card.setAttribute('src', 'images/TheOffice.jpeg')
         card.setAttribute('data-id', i)
-        // card/addEventListener('click', function())
         grid.appendChild(card)
     }
 }

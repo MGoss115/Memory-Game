@@ -1,7 +1,7 @@
-/* body{
+body{
     height: 100vh;
-    display: flex;
-} */
+    width: 100vw;
+}
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
@@ -16,10 +16,12 @@ h1 {
    grid-gap: 20px;
    justify-content: center;
    justify-items: auto;
+   cursor: pointer;
 }
 img{
     width: 150px;
 }
+
 
 
 

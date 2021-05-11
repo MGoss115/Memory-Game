@@ -62,20 +62,20 @@
     let clicked = []
     let clickedNum = []
     let matched = []
-    let time = 5
+    let time = 10
 
-    // function shuffleCards(){
-    //     let newCard = 0
-    //     let tempCard = 0
+    function shuffleCards(){
+        let newCard = 0
+        let tempCard = 0
 
-    //     for(let i = arr.length - 1; i > 0; i--){
-    //         newCard = Math.floor(Math.random() * (i + 1))
-    //         tempCard = arr[i]
-    //         arr[i] = arr[newCard]
-    //         arr[newCard] = tempCard
-    //     }
-    //     return arr
-    // }
+        for(let i = arr.length - 1; i >= 0; i--){
+            newCard = Math.floor(Math.random() * 11)
+            tempCard = arr[i]
+            arr[i] = arr[newCard]
+            arr[newCard] = tempCard
+        }
+        return arr
+    }
     
 
 
@@ -115,7 +115,8 @@
             card.addEventListener('click', cardImgDisplay)
             grid.appendChild(card)
         }
-        // shuffleCards()
+        shuffleCards()
+        
     }
     gameBoard()
 
@@ -142,6 +143,7 @@
            
           
         } 
+        
         clicked = []
         clickedNum = []
         score.textContent = matched.length
@@ -149,31 +151,24 @@
             score.textContent = 'You Won!!!'
           
         }
+        
        
      }
 
     //flip cards 
     function cardImgDisplay(){
+        
         let cardImgNum = this.getAttribute('data-index')
         this.setAttribute('src', arr[cardImgNum].img)
-      
-        
         clicked.push(arr[cardImgNum].name)
-
-       
         clickedNum.push(cardImgNum)
-      
-        
-        // clicked.length === 1 ? timeCountDown() : null
-        //     clearInterval(clicked.length === clicked)
-       
+        // this.setAttribute('src', arr[cardImgNum].img)
         if(clicked.length === 2){
-           
             setTimeout(() => checkCard(), 500)
            
         }
-       
     }
+   
 
 
     

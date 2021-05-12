@@ -62,7 +62,7 @@
     let clicked = []
     let clickedNum = []
     let matched = []
-    let time = 10
+    let time = 5
 
     function shuffleCards(){
         let newCard = 0
@@ -76,32 +76,32 @@
         }
         return arr
     }
-    
-
-
-    resetBtn.addEventListener('click', function(){
-        location.reload()
-    })
-  
-    //Timer
+//Timer
     function timeCountDown(){
         setInterval(function(){
             if(time <= 0){
                 clearInterval(time = 0)
-                return timeOut()
+                // return timeOut()
             }
             timer.innerHTML = `${time} seconds`
             time -= 1
             
         }, 1000)
+        
+       
     }
+    reset()
+
+    // function timeOut(){
+    //     document.querySelector('#timer').textContent= 'Time Out'
+    //     document.querySelector('.grid').innerHTML = " "
+    //     document.querySelector('.timeOut').textContent = "TIME OUT!!!" 
+    // }
+   
+   
+
     
 
-    function timeOut(){
-        document.querySelector('#timer').textContent= 'Time Out'
-        document.querySelector('.grid').innerHTML = " "
-        document.querySelector('.timeOut').src = 'images/Timeout.jpeg'
-    }
 
     startBtn.addEventListener('click', timeCountDown)
 
@@ -168,6 +168,33 @@
            
         }
     }
+    resetBtn.addEventListener('click', reset)
+    function reset(){
+        
+
+        let clicked = []
+        let clickedNum = []
+        let matched = 0
+        let time = 60
+
+        
+        for(let i = 0; i < arr.length; i++){
+            let card = document.createElement('img')
+            card.setAttribute('class', 'images')
+            card.setAttribute('src', 'images/TheOffice.jpeg')
+            card.setAttribute('data-index', i)
+            card.addEventListener('click', cardImgDisplay)
+            grid.appendChild(card)
+           
+            document.querySelector('.grid').innerHTML = " "
+            document.querySelector('.timeOut').textContent = " " 
+            document.querySelector('#score').textContent = matched
+            document.querySelector('#timer').innerHTML = `${time} seconds`
+            console.log(reset)
+        }
+        gameBoard()
+    }
+   
    
 
 

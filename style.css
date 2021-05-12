@@ -3,6 +3,7 @@ body{
     width: 100vw;
 	background-color: lightsteelblue;
 	color:beige;
+
 }
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -19,16 +20,19 @@ h1 {
 .grid{
    display: grid;
    grid-template-columns: repeat(4, 150px);
-   grid-gap: 20px;
+   grid-gap: 30px;
    margin-top: 0px;
    justify-content: center;
    justify-items: auto;
    cursor: pointer;
   
+
+  
   
 }
 img{
-    width: 150px;
+    width: 175px;
+	height: 200px;
 	
 }
 /* .grid-container{
@@ -38,9 +42,10 @@ img{
 	font-size: 100px;
 
 } */
-.timeout{
+/* .timeOut{
 	display: grid;
-}
+	margin: 0 auto;
+} */
 button{
 	background-color: lightsteelblue;
 	color: cornsilk;

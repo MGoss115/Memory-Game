@@ -59,24 +59,25 @@
     const startBtn = document.querySelector('#start-button')
     const resetBtn = document.querySelector('#reset')
     const score = document.querySelector('#score')
+    const won = document.querySelector('.youWon')
     let clicked = []
     let clickedNum = []
     let matched = []
     let time = 60
     let test 
 
-    function shuffleCards(){
-        let newCard = 0
-        let tempCard = 0
+    // function shuffleCards(){
+    //     let newCard = 0
+    //     let tempCard = 0
 
-        for(let i = arr.length - 1; i >= 0; i--){
-            newCard = Math.floor(Math.random() * 11)
-            tempCard = arr[i]
-            arr[i] = arr[newCard]
-            arr[newCard] = tempCard
-        }
-        return arr
-    }
+    //     for(let i = arr.length - 1; i >= 0; i--){
+    //         newCard = Math.floor(Math.random() * 11)
+    //         tempCard = arr[i]
+    //         arr[i] = arr[newCard]
+    //         arr[newCard] = tempCard
+    //     }
+    //     return arr
+    // }
 //Timer
     function timeCountDown(){
         test = setInterval(function(){
@@ -116,7 +117,7 @@
             card.addEventListener('click', cardImgDisplay)
             grid.appendChild(card)
         }
-        shuffleCards()
+        // shuffleCards()
         
     }
     gameBoard()
@@ -147,7 +148,7 @@
         clickedNum = []
         score.textContent = matched.length
         if(matched.length === arr.length/2){
-            score.textContent = 'You Won!!!'
+            won.textContent = 'You Found All 6 Matches!!!'
           
         }
         
@@ -183,6 +184,7 @@
             document.querySelector('.grid').innerHTML = " "
             document.querySelector('.timeOut').textContent = " " 
             document.querySelector('#score').textContent =  " "
+            document.querySelector('.youWon').textContent = " "
             document.querySelector('#timer').innerHTML = `${time} seconds`
 
         gameBoard()    

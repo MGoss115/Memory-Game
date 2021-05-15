@@ -62,7 +62,8 @@
     let clicked = []
     let clickedNum = []
     let matched = []
-    let time = 5
+    let time = 60
+    let test 
 
     function shuffleCards(){
         let newCard = 0
@@ -78,25 +79,25 @@
     }
 //Timer
     function timeCountDown(){
-        setInterval(function(){
+        test = setInterval(function(){
             if(time <= 0){
                 clearInterval(time = 0)
-                // return timeOut()
+                return timeOut()
             }
             timer.innerHTML = `${time} seconds`
             time -= 1
             
         }, 1000)
-        
        
     }
-    reset()
+    
+  
 
-    // function timeOut(){
-    //     document.querySelector('#timer').textContent= 'Time Out'
-    //     document.querySelector('.grid').innerHTML = " "
-    //     document.querySelector('.timeOut').textContent = "TIME OUT!!!" 
-    // }
+    function timeOut(){
+        document.querySelector('#timer').textContent= 'Time Out'
+        document.querySelector('.grid').innerHTML = " "
+        document.querySelector('.timeOut').textContent = "TIME OUT!!!" 
+    }
    
    
 
@@ -124,15 +125,13 @@
     function checkCard(){
         let cards = document.querySelectorAll('img')
         let cardNum1 = clickedNum[0]
-       
         let cardNum2 = clickedNum[1]
        
 
         if (clicked[0] === clicked[1]){
             cards[cardNum1].removeEventListener('click', cardImgDisplay)
-            
             cards[cardNum2].removeEventListener('click', cardImgDisplay)
-           
+          
             matched.push(clicked)
            
         } else {
@@ -169,31 +168,28 @@
         }
     }
     resetBtn.addEventListener('click', reset)
+        
     function reset(){
+        time = 60
+        clearInterval(test)
+        startBtn.removeEventListener('click', timeCountDown)
+        startBtn.addEventListener('click', timeCountDown)
         
-
-        let clicked = []
-        let clickedNum = []
-        let matched = 0
-        let time = 60
-
+        clicked = []
+        clickedNum = []
+        matched = []
+       
         
-        for(let i = 0; i < arr.length; i++){
-            let card = document.createElement('img')
-            card.setAttribute('class', 'images')
-            card.setAttribute('src', 'images/TheOffice.jpeg')
-            card.setAttribute('data-index', i)
-            card.addEventListener('click', cardImgDisplay)
-            grid.appendChild(card)
-           
             document.querySelector('.grid').innerHTML = " "
             document.querySelector('.timeOut').textContent = " " 
-            document.querySelector('#score').textContent = matched
+            document.querySelector('#score').textContent =  " "
             document.querySelector('#timer').innerHTML = `${time} seconds`
-            console.log(reset)
+
+        gameBoard()    
+           
         }
-        gameBoard()
-    }
+       
+    
    
    
 

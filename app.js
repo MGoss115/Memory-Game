@@ -66,18 +66,18 @@
     let time = 60
     let test 
 
-    // function shuffleCards(){
-    //     let newCard = 0
-    //     let tempCard = 0
+    function shuffleCards(){
+        let newCard = 0
+        let tempCard = 0
 
-    //     for(let i = arr.length - 1; i >= 0; i--){
-    //         newCard = Math.floor(Math.random() * 11)
-    //         tempCard = arr[i]
-    //         arr[i] = arr[newCard]
-    //         arr[newCard] = tempCard
-    //     }
-    //     return arr
-    // }
+        for(let i = arr.length - 1; i >= 0; i--){
+            newCard = Math.floor(Math.random() * 11)
+            tempCard = arr[i]
+            arr[i] = arr[newCard]
+            arr[newCard] = tempCard
+        }
+        return arr
+    }
 //Timer
     function timeCountDown(){
         test = setInterval(function(){
@@ -117,7 +117,7 @@
             card.addEventListener('click', cardImgDisplay)
             grid.appendChild(card)
         }
-        // shuffleCards()
+        shuffleCards()
         
     }
     gameBoard()

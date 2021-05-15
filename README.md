@@ -10,8 +10,7 @@ Here, you have your typical memory game with a little spin...Michael Scott! The 
 - Javascript 
 - HTML
 - CSS
-
-###Stretch Goals 
+##Stretch Goals 
 ****************
 - Background Music 
 - Reset Button
@@ -26,7 +25,7 @@ Here, you have your typical memory game with a little spin...Michael Scott! The 
 - If a match is made, both cards should remain face-up
 -  Track the score/tally of matches and display on the board
 
-##Wireframes
+#Wireframes
 **************
 ![Landing Page1](/images/LP.png)
 ![Landing Page1](/images/WP.png)

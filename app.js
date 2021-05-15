@@ -98,6 +98,7 @@
         document.querySelector('#timer').textContent= 'Time Out'
         document.querySelector('.grid').innerHTML = " "
         document.querySelector('.timeOut').textContent = "TIME OUT!!!" 
+        document.querySelector('.youWon').textContent = `You Found: ${matched.length} matches`
     }
    
    

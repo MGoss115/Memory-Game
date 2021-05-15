@@ -67,8 +67,8 @@
     let test 
 
     function shuffleCards(){
-        let newCard = 0
-        let tempCard = 0
+        let newCard 
+        let tempCard 
 
         for(let i = arr.length - 1; i >= 0; i--){
             newCard = Math.floor(Math.random() * 11)

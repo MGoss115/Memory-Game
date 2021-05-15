@@ -10,6 +10,7 @@ Here, you have your typical memory game with a little spin...Michael Scott! The 
 - Javascript 
 - HTML
 - CSS
+
 ###Stretch Goals 
 ****************
 - Background Music 

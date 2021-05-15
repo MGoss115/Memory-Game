@@ -16,7 +16,7 @@ Here, you have your typical memory game with a little spin...Michael Scott! The 
 - Reset Button
 - Add an Office animation
 
-###MVP
+##MVP
 ********
 - Randomly hide the cards face down 
 - Add a timer that counts down from 60 seconds

@@ -5,7 +5,10 @@
 ## How To Play
 ********************
 Here, you have your typical memory game with a little spin...Michael Scott! The game is played with a total of 12 cards, 6 matches **AND** you have the option to match against the clock **OR** play at your own speed.  Press start to play against the clock you will have 60 seconds to find all 6 matches.  Once all 6 matches are made a messsage will display letting the player know they won the game.  
-### Code 
+
+##### [Click To Play](https://mgoss115.github.io/Memory-Game/)
+
+## Code 
 *************
 - Javascript 
 - HTML

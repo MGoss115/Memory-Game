@@ -98,7 +98,7 @@
         document.querySelector('#timer').textContent= 'Time Out'
         document.querySelector('.grid').innerHTML = " "
         document.querySelector('.timeOut').textContent = "TIME OUT!!!" 
-        document.querySelector('.youWon').textContent = `You Found: ${matched.length} matches`
+        document.querySelector('.youWon').textContent = `You Found: ${matched.length} Matches`
     }
    
    
@@ -150,6 +150,7 @@
         score.textContent = matched.length
         if(matched.length === arr.length/2){
             won.textContent = 'You Found All 6 Matches!!!'
+            score.textContent = 'You won!!!'
           
         }
         
